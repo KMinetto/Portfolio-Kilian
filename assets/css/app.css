@@ -1,0 +1,61 @@
+@import url("./variables/variables.css");
+@import url("./menu/burger.css");
+@import url("./menu/menu.css");
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+}
+
+.navbar-brand,
+.nav-link {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease-in-out;
+    font-weight: 700;
+}
+.navbar-brand:hover,
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.scrolled {
+    background-color: var(--primary-color);
+}
+
+.scrolled .navbar-brand,
+.scrolled .nav-link {
+    color: var(--secondary-color);
+}
+
+.scrolled .navbar-brand:hover,
+.scrolled .nav-link:hover {
+    color: var(--blue-color);
+}
+
+.navbar-brand {
+    padding: 2rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#nav-list li a {
+    padding: 2rem 1.5rem
+}

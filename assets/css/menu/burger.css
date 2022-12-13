@@ -1,0 +1,58 @@
+/**
+File for Burger menu
+**/
+
+#burger {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    z-index: 1000;
+}
+
+#burger span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    background-color: var(--secondary-color);
+    transition: background-color .3s ease-in-out;
+}
+
+#burger span::before,
+#burger span::after {
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+#burger span::before {
+    transform: translateY(-12px);
+    transition: transform .3s ease-in-out;
+}
+
+#burger span::after {
+    transform: translateY(12px);
+    transition: transform .3s ease-in-out;
+}
+
+#burger.active {
+    transform: rotate(360deg);
+}
+
+#burger.active span {
+    background-color: transparent;
+}
+
+#burger.active span::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+#burger.active span::after {
+    transform: translateY(0) rotate(-45deg);
+}
